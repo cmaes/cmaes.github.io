@@ -1,0 +1,189 @@
+  @import url(http://fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
+  body {
+    font-family: "PT Serif", serif;
+    font-size: 18px;
+    margin: 0;
+  }
+  h1, h2 {
+    font-family: "PT Sans", sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+  h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+    line-height: 1em;
+  }
+  #masthead {
+    background: #00adef;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    color: white;
+    padding-bottom: 1em;
+  }
+  #masthead ul {
+    padding: 0;
+    list-style: none;
+  }
+  #masthead li {
+    display: inline;
+    padding-right: 0.5em;
+    font-weight: bold;
+  }
+  #masthead a {
+   font-family: "PT Sans", sans-serif;
+   text-rendering: optimizeLegibility;
+   color: white;
+   text-decoration: none;
+   padding-bottom: 5px;
+  }
+  #masthead a:hover {
+   border-bottom: 3px solid white;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+  }
+  #top_section {
+   padding: 0.5em;
+  }
+  #main_content {
+    background: #ffffff;
+    margin: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+  #main_content a {
+   color: #00adef;
+   text-decoration: none;
+  }
+  #footer {
+    background: #373e44;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+  }
+
+  #footer a {
+    color: white;
+  }
+  .group {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  .column-1-2 {
+    width: 100%;
+  }
+  .column-2-2 {
+    width: 100%;
+  }
+
+  .column-1-2-left {
+    width: 100%;
+  }
+
+  .column-2-2-left {
+    width: 100%;
+  }
+
+  .column-2-2-left p {
+    margin-top: 0;
+  }
+  #summary-group {
+    width: 100%;
+  }
+  #summary {
+    width: 80%;
+    display: inline-block;
+  }
+  #summary p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #pdf {
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  school {
+   display: block;
+   font-weight: bold;
+  }
+  timeframe {
+    display: block;
+  }
+  role {
+    display: block;
+  }
+  organization {
+    display: block;
+    font-weight: bold;
+  }
+  organization a {
+    text-decoration: none;
+  }
+  .degree {
+    width: 100%;
+  }
+  .degree ul {
+    width: 85%;
+  }
+  .work_experience {
+    width: 100%;
+  }
+  .work_experience ul {
+    width: 85%;
+  }
+  site_icon {
+      padding-right: 1em;
+  }
+  @media (min-width: 800px) {
+    #masthead {
+      padding-top: 40px;
+    }
+    #top_section {
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+    #footer_section {
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+
+    #main_content {
+      padding-top: 1em;
+      padding-left: 4em;
+      padding-right: 4em;
+      padding-bottom: 1em;
+    }
+   .column-1-2 {
+       width: 55%;
+     }
+   .column-2-2 {
+      margin-left: 2em;
+      width: 40%;
+    }
+
+   .column-1-2-left {
+      margin-top: 1em;
+      width: 40%;
+    }
+
+   .column-2-2-left {
+      margin-top: 1em;
+      margin-left: 1em;
+      width: 50%;
+   }
+
+    #headshot {
+      margin-left: 0.5em;
+    }
+  }

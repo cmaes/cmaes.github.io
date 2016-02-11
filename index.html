@@ -1,5 +1,233 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"><html>
+<head>
+  <title>Chris Maes</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Personal homepage for Chris Maes">
+  <meta property="og:title" content="Personal homepage for Chris Maes" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://chrisma.es/" />
+  <meta property="og:image" content="http://chrisma.es/headshot.jpg" />
+  <meta property="og:description" content="Personal homepage for Chris Maes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+<style>
+</style>
 <body>
-  <h1>Hello, internet</h1>
-  <h2>It's your boy: Chris Maes</h2>
+  <div id="masthead">
+    <div class="container">
+      <div id="top_section">
+        <h2>Hello internet. It's your boy:</h2>
+        <h1>Chris Maes</h1>
+        <div class="nav">
+          <ul>
+            <li><a href="#aboutme">About Me</a>
+            </li>
+            <li><a href="#projects">Projects</a>
+            </li>
+            <li><a href="resume.html">Resume</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="main_content">
+      <h2 id="#aboutme">About Me</h2>
+      <div class="group">
+      <div class="column-1-2">
+        <p>I'm a mathematician, computer scientist, and an engineer.</p>
+
+        <p>My background is
+          in <a href="https://en.wikipedia.org/wiki/Numerical_linear_algebra">linear
+          algebra</a>
+          and <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">numerical
+          optimization</a>.  I love optimization because most
+          business and engineering problems are easily expressed as
+        <a href="https://en.wikipedia.org/wiki/Optimization_problem">optimization
+          models</a>, and these models can be solved with <a href="https://en.wikipedia.org/wiki/Linear_programming">powerful
+          algorithms</a>.
+        </p>
+
+        <p>I'm also an avid programmer. I've worked with many
+          <a href="resume.html#languages">programming languages</a>
+          and <a href="resume.html#technologies">technologies</a>.
+          I've made major contributions to <a href="resume.html#gurobi">software</a> that is used by
+          hundreds of businesses and thousands of people around the world.
+        </p>
+
+
+
+      </div>
+      <div class="column-2-2">
+        <img src="headshot.jpg"/>
+      </div>
+      </div>
+
+      <h2 id="projects">Projects </h2>
+      <p> Below are some projects I've worked on. Many of them are fun,
+        some are a bit more serious, and all are technical. </p>
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="turtlelogo.png" width="300px">
+      </div>
+      <div class="column-2-2-left">
+        <p><b><a href="http://cmaes.github.io/logoturtle/">Logo
+            Interpreter</a></b>: An interpreter for
+          the <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)">Logo</a>
+          language. The <a href="https://github.com/cmaes/logoturtle">interpreter</a> is written in OCaml and compiled to
+          Javascript, so you can run Logo in your browser.
+        </p>
+      </div>
+      </div>
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="spartan.png" width="300px">
+      </div>
+      <div class="column-2-2-left">
+        <p><b><a href="https://github.com/cmaes/spartan/">Spartan</a></b>: A
+          Sparse Trust-region Algorithm for Nonlinear Equations. Spartan
+          computes a root of a system of nonlinear equations
+          with sparse derivatives. Spartan is used in the open-source
+          MATLAB-clone <a href="http://www.scilab.org">SciLab</a>.
+        </p>
+      </div>
+      </div>
+
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="clown.jpg" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p>
+          <b><a href="colorization.pdf">Colorization on GPUs</a></b>: I
+          implemented a method to color a grayscale image from a small
+          set of color annotations. The method is based on a parallel
+          implementation of
+          <a href="https://en.wikipedia.org/wiki/Preconditioner">preconditioned</a>
+          <a href="https://en.wikipedia.org/wiki/Conjugate_gradient_method">conjugate
+          gradient</a> in CUDA.
+          </p>
+          <p>
+          I used this method to solve two linear systems, each with 3
+          million unknowns, on two GPUs. The solutions produced a
+          coloring of a 1050 x 3360 image of El Capitan and the lower
+          Yosemite valley.
+          </p>
+        </div>
+      </div>
+      <div class="group">
+        <div class="column-1-2-left">
+          <!--- <img src="bighead-skin.png" width="225px"> -->
+          <img src="bighead.jpg" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p><b>Low-polygon 3D model of my head</b>: For Halloween in
+            2011, <a href="http://jim.sh">Jim Paris</a> and I wrote
+            some <a href="https://github.com/cmaes/hyperprojection">custom
+            software</a> to create a low-polygon model of our heads
+            from a series of still photos.</p>
+          <p>We printed and assembled the models and used them for
+            Halloween masks.
+          </p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="helio.jpg" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p><b><a href="http://chrisma.es/heliochronometer/">Heliochronometer</a></b>:
+            A sundial that
+            tells <a href="https://en.wikipedia.org/wiki/Standard_time">standard
+            mean time</a> by computing a correction from <a href="https://en.wikipedia.org/wiki/Solar_time">local real
+            time</a> via a mechanical computer.</p>
+          <p>The heliochronometer, which I built for Stanford's Design and
+            Manufacturing class, is based on the design of a 1906 brass
+            Pilkington and Gibbs heliochronometer.
+          </p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="philemon.png" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p><b><a href="http://www.philemonandminerva.com/diary.html">
+              Interactive Oregon Trail Diary</a></b>: In April of 1852, my
+            ancestor, <a href="http://www.philemonandminerva.com/">Philemon
+            Morris</a>, set out on the <a href="https://en.wikipedia.org/wiki/Oregon_Trail">Oregon Trail</a>. He kept a
+            detailed account of his trip west, and his first two winters in Oregon, in a small diary.</p>
+
+          <p>I wrote a small web app that matches each entry in the
+            diary to my best guess at his location along the trail.
+          </p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="droning.jpg" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p><b>Droning</b>: I'm a big drone enthusiast. I made a few videos
+            you might enjoy watching:
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=Br-b9GWMLtQ">
+                  In Massachusetts: Hingham and Hull through the eyes of an Inspire 1
+                </a>
+              </li>
+              <li><a href="https://www.youtube.com/watch?v=C91xnMN4q48">Castle Hill by Drone</a>
+                - The Crane estate in Ipswich, MA
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=4QteR4zGE8w">Flying the Phantom around
+                  the North Shore</a>
+              </li>
+          </p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="column-1-2-left">
+          <img src="legoorrery.png" width="300px">
+        </div>
+        <div class="column-2-2-left">
+          <p><b><a href="https://vimeo.com/2582063">Lego Orrery</a></b>: An Orrery is a mechanical model
+            of the solar system. My orrery depicts the motion of the Earth-Moon-Sun system. Four
+            independent rotations are powered by the rotation of a single axel powered by a Lego
+            71427 motor.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <center>
+        <site_icon>
+          <a href="http://github.com/cmaes/"><i class="fa fa-github fa-2x"></i></a>
+        </site_icon>
+        <site_icon>
+          <a href="http://stackoverflow.com/users/110379/codehippo"><i class="fa fa-stack-overflow fa-2x"></i></a>
+        </site_icon>
+        <site_icon>
+          <a href="mailto:cmmaes@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+        </site_icon>
+        <site_icon>
+          <a href="http://twitter.com/unbearablyhip"><i class="fa fa-twitter fa-2x"></i></a>
+        </site_icon>
+        <site_icon>
+          <a href="http://instagram.com/unbearablyhip"><i class="fa fa-instagram fa-2x"></i></a>
+        </site_icon>
+        <site_icon>
+          <a href="http://youtube.com/cmmaes"><i class="fa fa-youtube fa-2x"></i></a>
+        </site_icon>
+      </center>
+    </div>
+  </div>
+</body>
