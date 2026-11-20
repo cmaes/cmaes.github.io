@@ -304,13 +304,85 @@ timeframe {
 }
 .writing .award {
   display: inline-block;
-  margin-top: 0.6rem;
+  margin-top: 0.75rem;
   font-family: var(--sans);
   font-size: 0.85rem;
   background: #fff6dc;
   color: #6b4e00;
-  border-radius: 999px;
-  padding: 0.25rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  line-height: 1.5;
 }
 .writing .award a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .work_experience role.subrole { margin-top: 0.6rem; }
+
+/* ---------- Carousel ---------- */
+.carousel { position: relative; background: #05070b; }
+.carousel .slides {
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.carousel .slides::-webkit-scrollbar { display: none; }
+.carousel figure {
+  flex: 0 0 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  scroll-snap-align: start;
+}
+.carousel figure a { display: block; height: 100%; }
+.carousel figure img { width: 100%; height: 100%; object-fit: cover; }
+.carousel figure img.tall { object-fit: contain; position: relative; z-index: 1; }
+.carousel figure:has(img.tall)::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: var(--bg-img) center / cover;
+  filter: blur(18px) brightness(0.55);
+}
+.carousel figcaption { z-index: 2; }
+.column-1-2-left.carousel { aspect-ratio: 1 / 1; }
+.carousel figure { overflow: hidden; }
+.carousel figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.6rem 0.9rem 1.7rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+.carousel .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px; height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+}
+.carousel .nav:hover { background: rgba(0, 0, 0, 0.7); }
+.carousel .prev { left: 8px; }
+.carousel .next { right: 8px; }
+.carousel .dots {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.carousel .dots button {
+  width: 7px; height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+}
+.carousel .dots button.on { background: #fff; }
+.carousel .nav { display: grid; place-items: center; }

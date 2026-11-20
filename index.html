@@ -42,20 +42,20 @@
         <p>I'm a mathematician, computer scientist, and an engineer.</p>
 
         <p>My background is
-          in <a href="https://en.wikipedia.org/wiki/Numerical_linear_algebra">linear
-          algebra</a>
-          and <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">mathematical
-          optimization</a>. I love optimization because most
+          in linear
+          algebra
+          and mathematical
+          optimization. I love optimization because most
           business and engineering problems are easily expressed as
-          <a href="https://en.wikipedia.org/wiki/Optimization_problem">optimization
-          models</a>, and these models can be solved with
+          optimization
+          models, and these models can be solved with
           <a href="https://en.wikipedia.org/wiki/Linear_programming">powerful
           algorithms</a>.
         </p>
 
         <p>I currently lead the <a href="https://github.com/NVIDIA/cuopt">cuOpt</a>
           solver team at <a href="resume.html#nvidia">NVIDIA</a>, working on
-          GPU-accelerated decision optimization. Before that, I spent five
+          GPU-accelerated optimization. Before that, I spent five
           years at <a href="resume.html#apple">Apple</a>, first building
           real-time optimization solvers for autonomous systems and then as
           an engineering manager leading a trajectory optimization and ML
@@ -262,6 +262,31 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
 
       <div class="project">
       <div class="group">
+        <div class="column-1-2-left carousel" aria-roledescription="carousel" aria-label="Astrophotography">
+          <div class="slides">
+              <figure style="--bg-img:url(astro/m31.jpg)"><a href="astro/full/m31.jpg" target="_blank" rel="noopener"><img src="astro/m31.jpg" alt="Andromeda Galaxy (M31)" loading="lazy" class="tall"></a><figcaption>Andromeda Galaxy &ndash; M31 (70 min exposure)</figcaption></figure>
+              <figure style="--bg-img:url(astro/ngc1499.jpg)"><a href="astro/full/ngc1499.jpg" target="_blank" rel="noopener"><img src="astro/ngc1499.jpg" alt="California Nebula (NGC 1499)" loading="lazy" class="tall"></a><figcaption>California Nebula &ndash; NGC 1499 (52 min exposure)</figcaption></figure>
+              <figure><a href="astro/full/ngc7000.jpg" target="_blank" rel="noopener"><img src="astro/ngc7000.jpg" alt="North America Nebula (NGC 7000)" loading="lazy"></a><figcaption>North America Nebula &ndash; NGC 7000 (47 min exposure)</figcaption></figure>
+              <figure><a href="astro/full/ic434.jpg" target="_blank" rel="noopener"><img src="astro/ic434.jpg" alt="Horsehead Nebula (IC 434)" loading="lazy"></a><figcaption>Horsehead Nebula &ndash; IC 434 (48 min exposure)</figcaption></figure>
+              <figure style="--bg-img:url(astro/m42.jpg)"><a href="astro/full/m42.jpg" target="_blank" rel="noopener"><img src="astro/m42.jpg" alt="Orion Nebula (M42)" loading="lazy" class="tall"></a><figcaption>Orion Nebula &ndash; M42 (16 min exposure)</figcaption></figure>
+              <figure><a href="astro/full/seestar.jpg" target="_blank" rel="noopener"><img src="astro/seestar.jpg" alt="The Seestar S50 Pro on the roof" loading="lazy"></a><figcaption>The Seestar S50 Pro on the roof</figcaption></figure>
+          </div>
+          <button class="nav prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav next" aria-label="Next photo"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots"></div>
+        </div>
+        <div class="column-2-2-left">
+          <p><b>Astrophotography</b>: I recently started taking pictures
+            with a <a href="https://www.zwoastro.com/product/seestar-s50-pro/">Seestar
+            S50 Pro</a> telescope on my roof. It's amazing to see nebulas
+            and galaxies from my light-polluted house.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <div class="project">
+      <div class="group">
         <div class="column-1-2-left">
           <img src="droning.jpg">
         </div>
@@ -314,4 +339,27 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       </nav>
     </div>
   </div>
+<script>
+  document.querySelectorAll('.carousel').forEach(function (c) {
+    var track = c.querySelector('.slides');
+    var n = track.children.length;
+    var dots = c.querySelector('.dots');
+    for (var i = 0; i < n; i++) {
+      var d = document.createElement('button');
+      d.setAttribute('aria-label', 'Photo ' + (i + 1));
+      d.addEventListener('click', go.bind(null, i));
+      dots.appendChild(d);
+    }
+    function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function go(i) { track.scrollTo({ left: ((i + n) % n) * track.clientWidth, behavior: 'smooth' }); }
+    function mark() {
+      var k = current();
+      Array.prototype.forEach.call(dots.children, function (d, j) { d.classList.toggle('on', j === k); });
+    }
+    c.querySelector('.prev').addEventListener('click', function () { go(current() - 1); });
+    c.querySelector('.next').addEventListener('click', function () { go(current() + 1); });
+    track.addEventListener('scroll', mark, { passive: true });
+    mark();
+  });
+  </script>
 </body>
