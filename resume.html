@@ -1,18 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Chris Maes Resume</title>
   <meta charset="utf-8">
   <meta name="description" content="Resume for Chris Maes">
   <meta property="og:title" content="Resume for Chris Maes" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://chrisma.es/resume.html" />
-  <meta property="og:image" content="http://chrisma.es/headshot.jpg" />
+  <meta property="og:url" content="https://chrisma.es/resume.html" />
+  <meta property="og:image" content="https://chrisma.es/headshot.jpg" />
   <meta property="og:description" content="Resume for Chris Maes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-<style>
-</style>
+</head>
 <body>
   <div id="masthead">
     <div class="container">
@@ -22,6 +22,8 @@
         <div class="nav">
           <ul>
             <li><a href="index.html#aboutme">About Me</a>
+            </li>
+            <li><a href="index.html#writing">Writing</a>
             </li>
             <li><a href="index.html#projects">Projects</a>
             </li>
@@ -37,12 +39,10 @@
       <h2>Summary</h2>
       <div id="summary-group">
         <div id="summary">
-          <p>I love creating software to solve problems. I am a skilled
-            developer with a strong background in mathematics. I am an
-            expert in linear algebra and numerical optimization.</p>
-        </div>
-        <div id="pdf">
-          <p><a href="resume.pdf"><i class="fa fa-file-pdf-o fa-3x"></i></a></p>
+          <p>I build optimization solvers and lead the teams that develop
+            them, from linear and mixed-integer programming at NVIDIA and
+            Gurobi to real-time trajectory optimization for autonomous
+            vehicles at Apple and NVIDIA.</p>
         </div>
       </div>
       <h2>Education </h2>
@@ -86,16 +86,44 @@
 
       <h2> Experience </h2>
 
-      <div id="apple" class="work_experience">
-	<organization>
-	  <a href="http://apple.com">Apple</a>
-       </organization>
-	<role>Software Engineer</role>
-	<timeframe>June 2016 - present</role>
+      <div id="nvidia" class="work_experience">
+        <organization>
+          <a href="https://www.nvidia.com">NVIDIA</a>
+        </organization>
+        <role>Senior Engineering Manager, cuOpt</role>
+        <timeframe>July 2026 - present</timeframe>
         <ul>
-	  <li> Developing optimization solvers
-	</ul>
-       </div>
+          <li>Leading the <a href="https://github.com/NVIDIA/cuopt">cuOpt</a> solver team working on decision optimization</li>
+        </ul>
+        <role class="subrole">Principal Engineer, cuOpt</role>
+        <timeframe>October 2024 - July 2026</timeframe>
+        <ul>
+          <li>Developed dual simplex, branch and bound, the
+            <a href="https://developer.nvidia.com/blog/solve-linear-programs-using-the-gpu-accelerated-barrier-method-in-nvidia-cuopt/">GPU-accelerated barrier method</a>,
+            and cutting planes</li>
+        </ul>
+        <role class="subrole">Senior Engineering Manager, Autonomous Vehicles - Planning and Controls</role>
+        <timeframe>January 2022 - October 2024</timeframe>
+        <ul>
+          <li>Led a team working on optimization and ML for trajectory planning and controls</li>
+        </ul>
+      </div>
+
+      <div id="apple" class="work_experience">
+        <organization>
+          <a href="https://www.apple.com">Apple</a>
+        </organization>
+        <role>Engineering Manager</role>
+        <timeframe>June 2018 - December 2021</timeframe>
+        <ul>
+          <li>Led a trajectory optimization and ML prediction team</li>
+        </ul>
+        <role class="subrole">Software Engineer</role>
+        <timeframe>June 2016 - June 2018</timeframe>
+        <ul>
+          <li>Developed real-time optimization solvers for autonomous systems</li>
+        </ul>
+      </div>
 	
       <div id="gurobi" class="work_experience">
         <organization>
@@ -207,70 +235,18 @@
         </ul>
       </div>
 
-      <h2 id="languages">Programming Languages</h2>
-      <div class="group">
-        <div class="column-1-2-left">
-          I've written significant programs in:
-          <ul>
-            <li>C</li>
-            <li>Python</li>
-            <li>Matlab</li>
-            <li>Javascript</li>
-            <li>OCaml</li>
-            <li>Mathematica</li>
-            <li>Fortran 95</li>
-          </ul>
-        </div>
-        <div class="column-2-2-left">
-          I've written smaller programs in:
-          <ul>
-            <li>C++</li>
-            <li>Java</li>
-            <li>C#</li>
-            <li>Haskell</li>
-            <li>Scheme</li>
-            <li>Perl</li>
-            <li>R</li>
-          </ul>
-        </div>
-      </div>
-
-      <h2 id="technologies">Technologies</h2>
-
-      <ul>
-        <li>LaTeX</li>
-        <li>HTML and CSS</li>
-        <li><a href="https://d3js.org">D3.js</a></li>
-        <li><a href="https://www.meteor.com/">Meteor</a></li>
-        <li>EC2</li>
-        <li>CUDA</li>
-        <li>Lex and Yacc</li>
-      </ul>
     </div>
   </div>
-    <div id="footer">
+  <div id="footer">
     <div class="container">
-      <center>
-        <site_icon>
-          <a href="http://github.com/cmaes/"><i class="fa fa-github fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://stackoverflow.com/users/110379/codehippo"><i class="fa fa-stack-overflow fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="mailto:cmmaes@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://twitter.com/unbearablyhip"><i class="fa fa-twitter fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://instagram.com/unbearablyhip"><i class="fa fa-instagram fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://youtube.com/cmmaes"><i class="fa fa-youtube fa-2x"></i></a>
-        </site_icon>
-      </center>
-      </div>
+      <nav class="social" aria-label="Elsewhere">
+        <a href="https://github.com/cmaes/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://stackoverflow.com/users/110379/codehippo" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
+        <a href="mailto:cmmaes@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://twitter.com/unbearablyhip" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com/cmmaes" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </nav>
     </div>
+  </div>
   </div>
 </body>

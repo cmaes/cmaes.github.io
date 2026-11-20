@@ -1,18 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Chris Maes</title>
   <meta charset="utf-8">
   <meta name="description" content="Personal homepage for Chris Maes">
   <meta property="og:title" content="Personal homepage for Chris Maes" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://chrisma.es/" />
-  <meta property="og:image" content="http://chrisma.es/headshot.jpg" />
+  <meta property="og:url" content="https://chrisma.es/" />
+  <meta property="og:image" content="https://chrisma.es/headshot.jpg" />
   <meta property="og:description" content="Personal homepage for Chris Maes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-<style>
-</style>
+</head>
 <body>
   <div id="masthead">
     <div class="container">
@@ -22,6 +22,8 @@
         <div class="nav">
           <ul>
             <li><a href="#aboutme">About Me</a>
+            </li>
+            <li><a href="#writing">Writing</a>
             </li>
             <li><a href="#projects">Projects</a>
             </li>
@@ -34,7 +36,7 @@
   </div>
   <div class="container">
     <div id="main_content">
-      <h2 id="#aboutme">About Me</h2>
+      <h2 id="aboutme">About Me</h2>
       <div class="group">
       <div class="column-1-2">
         <p>I'm a mathematician, computer scientist, and an engineer.</p>
@@ -42,37 +44,54 @@
         <p>My background is
           in <a href="https://en.wikipedia.org/wiki/Numerical_linear_algebra">linear
           algebra</a>
-          and <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">numerical
-          optimization</a>.  I love optimization because most
+          and <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">mathematical
+          optimization</a>. I love optimization because most
           business and engineering problems are easily expressed as
-        <a href="https://en.wikipedia.org/wiki/Optimization_problem">optimization
-          models</a>, and these models can be solved with <a href="https://en.wikipedia.org/wiki/Linear_programming">powerful
+          <a href="https://en.wikipedia.org/wiki/Optimization_problem">optimization
+          models</a>, and these models can be solved with
+          <a href="https://en.wikipedia.org/wiki/Linear_programming">powerful
           algorithms</a>.
         </p>
 
-        <p>I'm also an avid programmer. I've worked with many
-          <a href="resume.html#languages">programming languages</a>
-          and <a href="resume.html#technologies">technologies</a>.
-          I've made major contributions to <a href="resume.html#gurobi">software</a> that is used by
-          hundreds of businesses and thousands of people around the world.
+        <p>I currently lead the <a href="https://github.com/NVIDIA/cuopt">cuOpt</a>
+          solver team at <a href="resume.html#nvidia">NVIDIA</a>, working on
+          GPU-accelerated decision optimization. Before that, I spent five
+          years at <a href="resume.html#apple">Apple</a>, first building
+          real-time optimization solvers for autonomous systems and then as
+          an engineering manager leading a trajectory optimization and ML
+          prediction team. Earlier, at
+          <a href="resume.html#gurobi">Gurobi Optimization</a>, I worked on
+          barrier and crossover, MIP heuristics, and developed the automatic
+          tuning tool and the Gurobi Instant Cloud.
         </p>
-
-
-
       </div>
       <div class="column-2-2">
-        <img src="headshot.jpg"/>
+        <img src="headshot.jpg" alt="Chris Maes">
       </div>
       </div>
+
+      <h2 id="writing">Selected Writing</h2>
+      <ul class="writing">
+        <li>
+          <a class="title" href="https://arxiv.org/abs/2601.21990">Batched First-Order Methods for Parallel LP Solving in MIP</a>
+          <span class="meta">Nicolas Blin, Stefano Gualandi, Christopher Maes, Andrea Lodi, Bartolomeo Stellato &middot; arXiv, January 2026</span>
+          <span class="award"><i class="fa-solid fa-award"></i> Honorable mention, 2026 <a href="https://connect.informs.org/computing/awards/greenberg-research-award">Harvey J. Greenberg Research Award</a>, INFORMS Computing Society</span>
+        </li>
+        <li>
+          <a class="title" href="https://developer.nvidia.com/blog/solve-linear-programs-using-the-gpu-accelerated-barrier-method-in-nvidia-cuopt/">Solve Linear Programs Using the GPU-Accelerated Barrier Method in NVIDIA cuOpt</a>
+          <span class="meta">NVIDIA Technical Blog &middot; October 2025</span>
+        </li>
+      </ul>
 
       <h2 id="projects">Projects </h2>
       <p> Below are some projects I've worked on. Many of them are fun,
         some are a bit more serious, all are technical. </p>
 
+      <div class="projects">
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="weather.gif" width="300px">
+          <img src="weather.gif">
         </div>
         <div class="column-2-2-left">
           <p>
@@ -95,7 +114,7 @@
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="turtlelogo.png" width="300px">
+          <img src="turtlelogo.png" class="diagram">
       </div>
       <div class="column-2-2-left">
         <p><b><a href="http://cmaes.github.io/logoturtle/">Logo
@@ -111,7 +130,7 @@
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="spartan.png" width="300px">
+          <img src="spartan.png" class="diagram">
       </div>
       <div class="column-2-2-left">
         <p><b><a href="https://github.com/cmaes/spartan/">Spartan</a></b>: A
@@ -127,7 +146,7 @@
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="clown.jpg" width="300px">
+          <img src="clown.jpg">
         </div>
         <div class="column-2-2-left">
           <p>
@@ -153,7 +172,7 @@
       <div class="group">
         <div class="column-1-2-left">
           <!--- <img src="bighead-skin.png" width="225px"> -->
-          <img src="bighead.jpg" width="300px">
+          <img src="bighead.jpg">
         </div>
         <div class="column-2-2-left">
           <p><b>Low-polygon 3D model of my head</b>: For Halloween in
@@ -171,7 +190,7 @@
       <div class="project">
         <div class="group">
           <div class="column-1-2-left">
-            <img src="brachistochrone.png" width="300px">
+            <img src="brachistochrone.png" class="diagram">
           </div>
           <div class="column-2-2-left">
             <p><b><a href="brachistochrone.pdf
@@ -192,7 +211,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
         <div class="group">
           <div class="column-1-2-left">
-            <img src="optimalbiddingcurve.png" width="300px">
+            <img src="optimalbiddingcurve.png" class="diagram">
           </div>
           <div class="column-2-2-left">
             <p><b><a href="bilinearbilevel.pdf">Optimal Bidding in Power Markets:</a></b> As
@@ -206,10 +225,10 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="helio.jpg" width="300px">
+          <img src="helio.jpg">
         </div>
         <div class="column-2-2-left">
-          <p><b><a href="http://chrisma.es/heliochronometer/">Heliochronometer</a></b>:
+          <p><b><a href="https://chrisma.es/heliochronometer/">Heliochronometer</a></b>:
             A sundial that
             tells <a href="https://en.wikipedia.org/wiki/Standard_time">standard
             mean time</a> by computing a correction from <a href="https://en.wikipedia.org/wiki/Solar_time">local real
@@ -225,7 +244,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="philemon.png" width="300px">
+          <img src="philemon.png">
         </div>
         <div class="column-2-2-left">
           <p><b><a href="http://www.philemonandminerva.com/diary.html">
@@ -244,11 +263,11 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="droning.jpg" width="300px">
+          <img src="droning.jpg">
         </div>
         <div class="column-2-2-left">
           <p><b>Droning</b>: I'm a big drone enthusiast. I made a few videos
-            you might enjoy watching:
+            you might enjoy watching:</p>
             <ul>
               <li><a href="https://www.youtube.com/watch?v=Br-b9GWMLtQ">
                   In Massachusetts: Hingham and Hull through the eyes of an Inspire 1
@@ -261,7 +280,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
                 <a href="https://www.youtube.com/watch?v=4QteR4zGE8w">Flying the Phantom around
                   the North Shore</a>
               </li>
-          </p>
+            </ul>
         </div>
       </div>
       </div>
@@ -269,7 +288,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="legoorrery.png" width="300px">
+          <img src="legoorrery.png">
         </div>
         <div class="column-2-2-left">
           <p><b><a href="https://vimeo.com/2582063">Lego Orrery</a></b>: An Orrery is a mechanical model
@@ -280,31 +299,19 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
         </div>
       </div>
       </div>
+      </div>
 
     </div>
   </div>
   <div id="footer">
     <div class="container">
-      <center>
-        <site_icon>
-          <a href="http://github.com/cmaes/"><i class="fa fa-github fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://stackoverflow.com/users/110379/codehippo"><i class="fa fa-stack-overflow fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="mailto:cmmaes@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://twitter.com/unbearablyhip"><i class="fa fa-twitter fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://instagram.com/unbearablyhip"><i class="fa fa-instagram fa-2x"></i></a>
-        </site_icon>
-        <site_icon>
-          <a href="http://youtube.com/cmmaes"><i class="fa fa-youtube fa-2x"></i></a>
-        </site_icon>
-      </center>
+      <nav class="social" aria-label="Elsewhere">
+        <a href="https://github.com/cmaes/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://stackoverflow.com/users/110379/codehippo" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
+        <a href="mailto:cmmaes@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://twitter.com/unbearablyhip" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com/cmmaes" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </nav>
     </div>
   </div>
 </body>
