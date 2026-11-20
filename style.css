@@ -410,3 +410,46 @@ timeframe {
 .carousel .prev { left: 0; justify-items: start; padding-left: 8px; }
 .carousel .next { right: 0; justify-items: end; padding-right: 8px; }
 .carousel .dots { z-index: 3; }
+.column-1-2-left img.top { object-position: top; }
+
+/* Before/after comparison slider */
+.compare { position: relative; }
+.compare img { position: absolute; inset: 0; }
+.compare img.before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare .divider {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  margin-left: -1px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.compare .divider::after {
+  content: "\2039\00a0\203A";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font: 600 18px/34px var(--sans);
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.compare { cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.compare img { pointer-events: none; }
+.compare input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.column-1-2-left img.onblack { object-fit: contain; padding: 0.6rem; background: #000; }
+.column-1-2-left img.whole { object-fit: contain; }

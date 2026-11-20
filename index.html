@@ -91,7 +91,7 @@
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="weather.gif">
+          <img src="weather.gif" class="whole" style="background:#0e0f0f">
         </div>
         <div class="column-2-2-left">
           <p>
@@ -145,8 +145,11 @@
 
       <div class="project">
       <div class="group">
-        <div class="column-1-2-left">
-          <img src="clown.jpg">
+        <div class="column-1-2-left compare" style="--pos: 50%">
+          <img src="clown_clr.jpg" alt="Colorized result">
+          <img src="clown_marked.jpg" alt="Grayscale photo with color annotations" class="before">
+          <span class="divider" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
         </div>
         <div class="column-2-2-left">
           <p>
@@ -172,7 +175,7 @@
       <div class="group">
         <div class="column-1-2-left">
           <!--- <img src="bighead-skin.png" width="225px"> -->
-          <img src="bighead.jpg">
+          <img src="bighead.jpg" class="top">
         </div>
         <div class="column-2-2-left">
           <p><b>Low-polygon 3D model of my head</b>: For Halloween in
@@ -244,7 +247,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="philemon.png">
+          <img src="philemon.png" class="top">
         </div>
         <div class="column-2-2-left">
           <p><b><a href="http://www.philemonandminerva.com/diary.html">
@@ -287,6 +290,40 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
 
       <div class="project">
       <div class="group">
+        <div class="column-1-2-left carousel" aria-roledescription="carousel" aria-label="Herreshoff/Doughdish 12.5">
+          <div class="slides">
+              <figure><img src="sailing/boat01.jpg" alt="Picking up the boat" loading="lazy"></figure>
+              <figure><img src="sailing/boat03.jpg" alt="On the trailer at the harbor" loading="lazy"></figure>
+              <figure><img src="sailing/boat02.jpg" alt="Periwinkle on her trailer" loading="lazy"></figure>
+              <figure><img src="sailing/boat04.jpg" alt="First time on the water" loading="lazy"></figure>
+              <figure><img src="sailing/boat05.jpg" alt="Thumbs up on the dock" loading="lazy"></figure>
+              <figure><img src="sailing/boat08.jpg" alt="At the tiller" loading="lazy"></figure>
+              <figure><img src="sailing/boat10.jpg" alt="Emma under sail at sunset" loading="lazy"></figure>
+              <figure><img src="sailing/boat14.jpg" alt="Sunset sail" loading="lazy"></figure>
+              <figure><img src="sailing/boat15.jpg" alt="Sailing with family" loading="lazy"></figure>
+          </div>
+          <button class="nav prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav next" aria-label="Next photo"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots"></div>
+        </div>
+        <div class="column-2-2-left">
+          <p><b>Herreshoff/Doughdish 12.5</b>: When I was 12, my grandfather
+            and I tried to build a wooden Haven 12.5 sailboat. We didn't get
+            very far. We steamed the oak ribs, bent them over the plywood
+            frames, and came back the next day to find them all broken. So
+            this sailboat has long been a dream of mine.
+          </p>
+          <p>In 2026 I was delighted to buy a <a href="https://www.doughdishllc.com">Doughdish</a>, a replica of the
+            Herreshoff 12.5 with a fiberglass hull. Our family had a blast
+            sailing around Wellfleet and Beverly Harbor in this small,
+            beautiful sailboat.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <div class="project">
+      <div class="group">
         <div class="column-1-2-left">
           <img src="droning.jpg">
         </div>
@@ -313,7 +350,7 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
       <div class="project">
       <div class="group">
         <div class="column-1-2-left">
-          <img src="legoorrery.png">
+          <img src="legoorrery.png" class="onblack">
         </div>
         <div class="column-2-2-left">
           <p><b><a href="https://vimeo.com/2582063">Lego Orrery</a></b>: An Orrery is a mechanical model
@@ -360,6 +397,28 @@ method for the <a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP<
     c.querySelector('.next').addEventListener('click', function () { go(current() + 1); });
     track.addEventListener('scroll', mark, { passive: true });
     mark();
+  });
+  document.querySelectorAll('.compare').forEach(function (c) {
+    var input = c.querySelector('input');
+    function set(pct) {
+      pct = Math.max(0, Math.min(100, pct));
+      c.style.setProperty('--pos', pct + '%');
+      input.value = pct;
+    }
+    function fromPointer(e) {
+      var r = c.getBoundingClientRect();
+      set((e.clientX - r.left) / r.width * 100);
+    }
+    var dragging = false;
+    c.addEventListener('pointerdown', function (e) {
+      dragging = true;
+      c.setPointerCapture(e.pointerId);
+      fromPointer(e);
+    });
+    c.addEventListener('pointermove', function (e) { if (dragging) fromPointer(e); });
+    c.addEventListener('pointerup', function () { dragging = false; });
+    c.addEventListener('pointercancel', function () { dragging = false; });
+    input.addEventListener('input', function () { set(+input.value); });
   });
   </script>
 </body>
