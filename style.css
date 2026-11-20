@@ -194,10 +194,11 @@ h1, h2, h3 {
 .work_experience::before {
   content: "";
   position: absolute;
-  left: -7px;
+  left: -8px;
   top: 0.45rem;
-  width: 12px;
-  height: 12px;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--paper);
   border: 2px solid var(--accent);
@@ -386,3 +387,26 @@ timeframe {
 }
 .carousel .dots button.on { background: #fff; }
 .carousel .nav { display: grid; place-items: center; }
+
+/* Bigger tap targets for the arrows */
+.carousel .nav {
+  top: 0;
+  bottom: 0;
+  transform: none;
+  width: max(72px, 25%);
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  z-index: 3;
+}
+.carousel .nav svg {
+  box-sizing: content-box;
+  padding: 13px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.carousel .nav:hover { background: transparent; }
+.carousel .nav:hover svg { background: rgba(0, 0, 0, 0.75); }
+.carousel .prev { left: 0; justify-items: start; padding-left: 8px; }
+.carousel .next { right: 0; justify-items: end; padding-right: 8px; }
+.carousel .dots { z-index: 3; }
